@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import { Main,Marval } from "./utils";
 
-function App() {
+ function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Main />} />
+      <Route path="/:id" element={ <Marval /> } />
+      </Routes>
+      {/* <Card /> */}
     </div>
   );
 }
 
 export default App;
+
+
+// animelist ? (
+//   animelist.map((anime, index) {
+//   return (
+//   <div className="card">
+//   <img images .jpg. alt="animelmage"
+//   <div className="anime-info">
+//   < titlefr< /h4>
+//   </div>
+//   : "Not Found"
